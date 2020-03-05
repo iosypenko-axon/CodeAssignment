@@ -13,6 +13,8 @@
 		187C4F9424112E4900E81133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187C4F9324112E4900E81133 /* Assets.xcassets */; };
 		187C4F9724112E4900E81133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187C4F9524112E4900E81133 /* LaunchScreen.storyboard */; };
 		187C4FA224112E4900E81133 /* TattoodoCodeAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C4FA124112E4900E81133 /* TattoodoCodeAssignmentTests.swift */; };
+		2605D3AC6E15387F521DD78E /* Pods_TattoodoCodeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB7392FA1E945AC196C05BD /* Pods_TattoodoCodeAssignment.framework */; };
+		9123C700BB8F83FEB77F9C62 /* Pods_TattoodoCodeAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2778496B0C4D27FE7E0C7D5 /* Pods_TattoodoCodeAssignmentTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,12 @@
 		187C4F9D24112E4900E81133 /* TattoodoCodeAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TattoodoCodeAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		187C4FA124112E4900E81133 /* TattoodoCodeAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattoodoCodeAssignmentTests.swift; sourceTree = "<group>"; };
 		187C4FA324112E4900E81133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29B0851DA0D4C6BFBB09209E /* Pods-TattoodoCodeAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TattoodoCodeAssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-TattoodoCodeAssignmentTests/Pods-TattoodoCodeAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5FB7392FA1E945AC196C05BD /* Pods_TattoodoCodeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TattoodoCodeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B139FA6A73AE2B98DE51082 /* Pods-TattoodoCodeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TattoodoCodeAssignment.release.xcconfig"; path = "Target Support Files/Pods-TattoodoCodeAssignment/Pods-TattoodoCodeAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		93D0A369D1384BE593BF1126 /* Pods-TattoodoCodeAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TattoodoCodeAssignment.debug.xcconfig"; path = "Target Support Files/Pods-TattoodoCodeAssignment/Pods-TattoodoCodeAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		A2778496B0C4D27FE7E0C7D5 /* Pods_TattoodoCodeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TattoodoCodeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2AFD377A28C2F5CB0BCE28B /* Pods-TattoodoCodeAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TattoodoCodeAssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-TattoodoCodeAssignmentTests/Pods-TattoodoCodeAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2605D3AC6E15387F521DD78E /* Pods_TattoodoCodeAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9123C700BB8F83FEB77F9C62 /* Pods_TattoodoCodeAssignmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10E5E4C743BD0C6D9FAE1212 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93D0A369D1384BE593BF1126 /* Pods-TattoodoCodeAssignment.debug.xcconfig */,
+				8B139FA6A73AE2B98DE51082 /* Pods-TattoodoCodeAssignment.release.xcconfig */,
+				29B0851DA0D4C6BFBB09209E /* Pods-TattoodoCodeAssignmentTests.debug.xcconfig */,
+				B2AFD377A28C2F5CB0BCE28B /* Pods-TattoodoCodeAssignmentTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		187C4F8024112E4700E81133 = {
 			isa = PBXGroup;
 			children = (
 				187C4F8B24112E4700E81133 /* TattoodoCodeAssignment */,
 				187C4FA024112E4900E81133 /* TattoodoCodeAssignmentTests */,
 				187C4F8A24112E4700E81133 /* Products */,
+				10E5E4C743BD0C6D9FAE1212 /* Pods */,
+				9EFC72BD8286CAA732DD1B93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +120,15 @@
 			path = TattoodoCodeAssignmentTests;
 			sourceTree = "<group>";
 		};
+		9EFC72BD8286CAA732DD1B93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FB7392FA1E945AC196C05BD /* Pods_TattoodoCodeAssignment.framework */,
+				A2778496B0C4D27FE7E0C7D5 /* Pods_TattoodoCodeAssignmentTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 187C4FA624112E4900E81133 /* Build configuration list for PBXNativeTarget "TattoodoCodeAssignment" */;
 			buildPhases = (
+				988BAFDA6C9F41FFC4C49DAB /* [CP] Check Pods Manifest.lock */,
 				187C4F8524112E4700E81133 /* Sources */,
 				187C4F8624112E4700E81133 /* Frameworks */,
 				187C4F8724112E4700E81133 /* Resources */,
+				223C9478B4DE25803C0B875E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +155,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 187C4FA924112E4900E81133 /* Build configuration list for PBXNativeTarget "TattoodoCodeAssignmentTests" */;
 			buildPhases = (
+				342F32F46BD9DDBFBF1877FA /* [CP] Check Pods Manifest.lock */,
 				187C4F9924112E4900E81133 /* Sources */,
 				187C4F9A24112E4900E81133 /* Frameworks */,
 				187C4F9B24112E4900E81133 /* Resources */,
@@ -191,6 +227,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		223C9478B4DE25803C0B875E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TattoodoCodeAssignment/Pods-TattoodoCodeAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TattoodoCodeAssignment/Pods-TattoodoCodeAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TattoodoCodeAssignment/Pods-TattoodoCodeAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		342F32F46BD9DDBFBF1877FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TattoodoCodeAssignmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		988BAFDA6C9F41FFC4C49DAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TattoodoCodeAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		187C4F8524112E4700E81133 /* Sources */ = {
@@ -291,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -346,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -358,6 +458,7 @@
 		};
 		187C4FA724112E4900E81133 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93D0A369D1384BE593BF1126 /* Pods-TattoodoCodeAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,12 +471,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iosypenk.TattoodoCodeAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		187C4FA824112E4900E81133 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B139FA6A73AE2B98DE51082 /* Pods-TattoodoCodeAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -388,12 +490,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iosypenk.TattoodoCodeAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		187C4FAA24112E4900E81133 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29B0851DA0D4C6BFBB09209E /* Pods-TattoodoCodeAssignmentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +518,7 @@
 		};
 		187C4FAB24112E4900E81133 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2AFD377A28C2F5CB0BCE28B /* Pods-TattoodoCodeAssignmentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
