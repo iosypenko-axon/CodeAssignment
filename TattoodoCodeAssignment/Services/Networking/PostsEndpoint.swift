@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum PostsEndpoint {
-    case getPostList(pageNumber: Int)
+    case getPostsList(pageNumber: Int)
     case getPostDetails(postId: Int)
 }
 
@@ -19,7 +19,7 @@ extension PostsEndpoint: TargetType {
 
     var path: String {
         switch self {
-        case .getPostList:
+        case .getPostsList:
             return "search/posts"
         case .getPostDetails(let postId):
             return "posts/\(postId)"
@@ -28,7 +28,7 @@ extension PostsEndpoint: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .getPostList,
+        case .getPostsList,
              .getPostDetails:
             return .get
         }
@@ -38,7 +38,7 @@ extension PostsEndpoint: TargetType {
     
     var task: Task {
         switch self {
-        case .getPostList(let pageNumber):
+        case .getPostsList(let pageNumber):
             return .requestParameters(parameters: ["page": pageNumber], encoding: URLEncoding.default)
         case .getPostDetails:
             return .requestPlain

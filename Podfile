@@ -8,7 +8,8 @@ target 'TattoodoCodeAssignment' do
   # Pods for TattoodoCodeAssignment
 
   pod 'Moya'
-
+  pod 'Kingfisher'
+  
   target 'TattoodoCodeAssignmentTests' do
     inherit! :search_paths
     # Pods for testing
