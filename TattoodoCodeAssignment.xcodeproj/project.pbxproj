@@ -19,6 +19,7 @@
 		18420C7D24114DA10060B3BE /* TattooListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18420C7B24114DA10060B3BE /* TattooListCell.xib */; };
 		18420C7F24114EEF0060B3BE /* TattooListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C7E24114EEF0060B3BE /* TattooListInteractor.swift */; };
 		18420C81241150B60060B3BE /* TattooDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C80241150B60060B3BE /* TattooDetailsInteractor.swift */; };
+		18420C85241241F30060B3BE /* PostsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C84241241F30060B3BE /* PostsEndpoint.swift */; };
 		187C4F8D24112E4700E81133 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C4F8C24112E4700E81133 /* AppDelegate.swift */; };
 		187C4F9424112E4900E81133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187C4F9324112E4900E81133 /* Assets.xcassets */; };
 		187C4F9724112E4900E81133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187C4F9524112E4900E81133 /* LaunchScreen.storyboard */; };
@@ -50,6 +51,7 @@
 		18420C7B24114DA10060B3BE /* TattooListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TattooListCell.xib; sourceTree = "<group>"; };
 		18420C7E24114EEF0060B3BE /* TattooListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooListInteractor.swift; sourceTree = "<group>"; };
 		18420C80241150B60060B3BE /* TattooDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooDetailsInteractor.swift; sourceTree = "<group>"; };
+		18420C84241241F30060B3BE /* PostsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsEndpoint.swift; sourceTree = "<group>"; };
 		187C4F8924112E4700E81133 /* TattoodoCodeAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TattoodoCodeAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187C4F8C24112E4700E81133 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		187C4F9324112E4900E81133 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -179,6 +181,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		18420C82241160FD0060B3BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				18420C832411614D0060B3BE /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		18420C832411614D0060B3BE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				18420C84241241F30060B3BE /* PostsEndpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		187C4F8024112E4700E81133 = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +222,7 @@
 			children = (
 				187C4F8C24112E4700E81133 /* AppDelegate.swift */,
 				18420C592411341D0060B3BE /* Scenes */,
+				18420C82241160FD0060B3BE /* Services */,
 				18420C61241135B20060B3BE /* Utils */,
 				18420C7124114A0E0060B3BE /* Extensions */,
 				18420C58241133780060B3BE /* Configuration */,
@@ -407,6 +426,7 @@
 				18420C7524114BC10060B3BE /* TattooDetailsScreen.swift in Sources */,
 				18420C6C241139D50060B3BE /* TattooListViewController.swift in Sources */,
 				18420C81241150B60060B3BE /* TattooDetailsInteractor.swift in Sources */,
+				18420C85241241F30060B3BE /* PostsEndpoint.swift in Sources */,
 				187C4F8D24112E4700E81133 /* AppDelegate.swift in Sources */,
 				18420C7C24114DA10060B3BE /* TattooListCell.swift in Sources */,
 				18420C7924114C6B0060B3BE /* TattooDetailsViewController.swift in Sources */,
