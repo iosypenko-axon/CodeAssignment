@@ -18,7 +18,6 @@
 		18420C7924114C6B0060B3BE /* TattooDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C7824114C6B0060B3BE /* TattooDetailsViewController.swift */; };
 		18420C7C24114DA10060B3BE /* TattooListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C7A24114DA10060B3BE /* TattooListCell.swift */; };
 		18420C7D24114DA10060B3BE /* TattooListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18420C7B24114DA10060B3BE /* TattooListCell.xib */; };
-		18420C7F24114EEF0060B3BE /* TattooListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C7E24114EEF0060B3BE /* TattooListInteractor.swift */; };
 		18420C81241150B60060B3BE /* TattooDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C80241150B60060B3BE /* TattooDetailsInteractor.swift */; };
 		18420C85241241F30060B3BE /* PostsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C84241241F30060B3BE /* PostsEndpoint.swift */; };
 		18420C8724124A260060B3BE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C8624124A260060B3BE /* NetworkService.swift */; };
@@ -27,6 +26,7 @@
 		18420C94241286B20060B3BE /* PaginationSupportable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C93241286B20060B3BE /* PaginationSupportable.swift */; };
 		18420C9924128A530060B3BE /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C9824128A530060B3BE /* PostDetails.swift */; };
 		18420C9B24128A7E0060B3BE /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C9A24128A7E0060B3BE /* Pagination.swift */; };
+		18420C9D2412A7220060B3BE /* ReuseIdentifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C9C2412A7220060B3BE /* ReuseIdentifying.swift */; };
 		187C4F8D24112E4700E81133 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C4F8C24112E4700E81133 /* AppDelegate.swift */; };
 		187C4F9424112E4900E81133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187C4F9324112E4900E81133 /* Assets.xcassets */; };
 		187C4F9724112E4900E81133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187C4F9524112E4900E81133 /* LaunchScreen.storyboard */; };
@@ -56,7 +56,6 @@
 		18420C7824114C6B0060B3BE /* TattooDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooDetailsViewController.swift; sourceTree = "<group>"; };
 		18420C7A24114DA10060B3BE /* TattooListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooListCell.swift; sourceTree = "<group>"; };
 		18420C7B24114DA10060B3BE /* TattooListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TattooListCell.xib; sourceTree = "<group>"; };
-		18420C7E24114EEF0060B3BE /* TattooListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooListInteractor.swift; sourceTree = "<group>"; };
 		18420C80241150B60060B3BE /* TattooDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooDetailsInteractor.swift; sourceTree = "<group>"; };
 		18420C84241241F30060B3BE /* PostsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsEndpoint.swift; sourceTree = "<group>"; };
 		18420C8624124A260060B3BE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		18420C93241286B20060B3BE /* PaginationSupportable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationSupportable.swift; sourceTree = "<group>"; };
 		18420C9824128A530060B3BE /* PostDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetails.swift; sourceTree = "<group>"; };
 		18420C9A24128A7E0060B3BE /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		18420C9C2412A7220060B3BE /* ReuseIdentifying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifying.swift; sourceTree = "<group>"; };
 		187C4F8924112E4700E81133 /* TattoodoCodeAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TattoodoCodeAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187C4F8C24112E4700E81133 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		187C4F9324112E4900E81133 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,7 +151,6 @@
 				18420C70241147E60060B3BE /* Cells */,
 				18420C67241139A80060B3BE /* TattooListScreen.swift */,
 				18420C69241139BD0060B3BE /* TattooListPresenter.swift */,
-				18420C7E24114EEF0060B3BE /* TattooListInteractor.swift */,
 				18420C6B241139D50060B3BE /* TattooListViewController.swift */,
 			);
 			path = TattooList;
@@ -189,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				18420C7224114A3B0060B3BE /* UIView+AutoLayout.swift */,
+				18420C9C2412A7220060B3BE /* ReuseIdentifying.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -456,9 +456,9 @@
 				18420C7724114C4A0060B3BE /* TattooDetailsPresenter.swift in Sources */,
 				18420C68241139A80060B3BE /* TattooListScreen.swift in Sources */,
 				18420C6F24113C370060B3BE /* NavigationController.swift in Sources */,
+				18420C9D2412A7220060B3BE /* ReuseIdentifying.swift in Sources */,
 				18420C7324114A3B0060B3BE /* UIView+AutoLayout.swift in Sources */,
 				18420C6A241139BD0060B3BE /* TattooListPresenter.swift in Sources */,
-				18420C7F24114EEF0060B3BE /* TattooListInteractor.swift in Sources */,
 				18420C92241286830060B3BE /* PaginationManager.swift in Sources */,
 				18420C94241286B20060B3BE /* PaginationSupportable.swift in Sources */,
 				18420C8724124A260060B3BE /* NetworkService.swift in Sources */,

@@ -10,14 +10,14 @@ import Foundation
 
 struct PostShortData: Decodable {
     let id: Int
-    let image: PostImage
-    let counts: PostCounts
+    let image: PostImage?
+    let counts: PostCounts?
 }
 
 struct PostImage: Decodable {
-    let url: String
-    let width: Int
-    let height: Int
+    let url: URL?
+    let width: Int?
+    let height: Int?
 }
 
 struct PostCounts: Decodable {

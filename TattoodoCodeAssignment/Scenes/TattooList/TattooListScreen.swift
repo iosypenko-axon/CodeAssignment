@@ -24,13 +24,10 @@ final class TattooListScreen {
     
     func instantiateViewController() -> TattooListViewController {
         let viewController = TattooListViewController()
-        let interactor = TattooListInteractor()
         
-        let presenter = TattooListPresenter()
+        let presenter = TattooListPresenter(paginationManager: PaginationManager())
         presenter.attach(view: viewController)
         presenter.attach(router: self)
-        presenter.attach(interactor: interactor)
-        interactor.attach(output: presenter)
         
         viewController.attach(output: presenter)
         
