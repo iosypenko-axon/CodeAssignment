@@ -30,6 +30,7 @@ final class TattooListScreen {
     
     func instantiateViewController() -> TattooListViewController {
         let viewController = TattooListViewController()
+        viewController.title = "Posts"
         
         let paginationManager = PaginationManager(networkService: networkService)
         let presenter = TattooListPresenter(paginationManager: paginationManager)
