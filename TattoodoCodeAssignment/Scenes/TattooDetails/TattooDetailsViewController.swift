@@ -36,7 +36,7 @@ class TattooDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentInset.bottom = 30
+        setupView()
         output?.didLoad()
     }
 }
@@ -61,5 +61,15 @@ extension TattooDetailsViewController: TattooDetailsViewInput {
     func showError(description: String) {
         let alertController = UIAlertController(title: "Error", message: description, preferredStyle: .alert)
         self.present(alertController, animated: true, completion: nil)
+    }
+}
+
+private extension TattooDetailsViewController {
+    func setupView() {
+        scrollView.contentInset.bottom = 30
+        likesLabel.text = nil
+        commentsLabel.text = nil
+        pinsLabel.text = nil
+        descriptionLabel.text = nil
     }
 }
