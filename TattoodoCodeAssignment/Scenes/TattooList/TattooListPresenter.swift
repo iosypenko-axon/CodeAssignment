@@ -15,6 +15,7 @@ protocol TattooListViewOutput: class {
     var shouldShowSpinner: Bool { get }
     func viewModelForCell(at index: Int) -> CellViewModel
     func didScrollToBottom()
+    func didSelectCell(at index: Int)
     func didLoad()
 }
 
@@ -67,6 +68,11 @@ extension TattooListPresenter: TattooListViewOutput {
     func didScrollToBottom() {
         view?.showSpinner()
         loadPostsList()
+    }
+    
+    func didSelectCell(at index: Int) {
+        guard pages.count > index else { return }
+        router?.openDetails(for: pages[index].id)
     }
     
     func didLoad() {

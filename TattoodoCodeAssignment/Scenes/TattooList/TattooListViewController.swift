@@ -52,6 +52,10 @@ extension TattooListViewController: UITableViewDelegate {
             scrollView.contentOffset.y + scrollView.frame.size.height + 20.0 > scrollView.contentSize.height else { return }
         output?.didScrollToBottom()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        output?.didSelectCell(at: indexPath.row)
+    }
 }
 
 // MARK: - UITableViewDataSource

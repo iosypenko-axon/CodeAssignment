@@ -13,7 +13,11 @@ final class PaginationManager: PaginationSupportable {
     typealias PaginatedItem = PostShortData
     
     private var loadedPages: [PostsListPage] = []
-    private let networkService: PostsListProvider = NetworkService(networkProvider: MoyaProvider<PostsEndpoint>(plugins: [NetworkLoggerPlugin()]))
+    private let networkService: PostsListProvider
+    
+    init(networkService: PostsListProvider) {
+        self.networkService = networkService
+    }
     
     var dataSource: [PostShortData] = []
     var currentPage: Int { loadedPages.count }

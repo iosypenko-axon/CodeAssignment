@@ -9,12 +9,19 @@
 import Foundation
 
 protocol TattooDetailsViewOutput: class {
+    func didLoad()
 }
 
 class TattooDetailsPresenter {
     private var router: TattooDetailsRouter?
     private weak var view: TattooDetailsViewInput?
-    private var interactor: TattooDetailsInteractorInput?
+    private let networkProvider: PostDetailsProvider
+    private let postId: Int
+    
+    init(networkProvider: PostDetailsProvider, postId: Int) {
+        self.networkProvider = networkProvider
+        self.postId = postId
+    }
 }
 
 // MARK: - Public methods
@@ -23,24 +30,23 @@ extension TattooDetailsPresenter {
         self.router = router
     }
     
-    func attach(interactor: TattooDetailsInteractorInput) {
-        self.interactor = interactor
-    }
-    
     func attach(view: TattooDetailsViewInput) {
         self.view = view
     }
 }
 
+// MARK: - TattooDetailsViewOutput
 extension TattooDetailsPresenter: TattooDetailsViewOutput {
-    
+    func didLoad() {
+        loadPostDetails()
+    }
 }
 
-// MARK: - TattooDetailsInteractorInput
-extension TattooDetailsPresenter: TattooDetailsInteractorInput {
-    
+// MARK: - Private methods
+private extension TattooDetailsPresenter {
+    func loadPostDetails() {
+        networkProvider.getPostDetails(pageId: postId) { result in
+            //
+        }
+    }
 }
-
-// MARK: - TattooDetailsInteractorOutput
-extension TattooDetailsPresenter: TattooDetailsInteractorOutput {}
-

@@ -15,6 +15,13 @@ protocol TattooDetailsRouter: class {
 final class TattooDetailsScreen {
     private weak var presenter: TattooDetailsPresenter?
     private weak var viewController: TattooDetailsViewController?
+    private let networkService: NetworkProvider
+    private let postId: Int
+    
+    init(networkService: NetworkProvider, postId: Int) {
+        self.networkService = networkService
+        self.postId = postId
+    }
     
     func push(to navController: UINavigationController, animated: Bool = true) {
         navController.pushViewController(instantiateViewController(), animated: animated)
@@ -22,14 +29,11 @@ final class TattooDetailsScreen {
     
     func instantiateViewController() -> TattooDetailsViewController {
         let viewController = TattooDetailsViewController()
-        let interactor = TattooDetailsInteractor()
         
-        let presenter = TattooDetailsPresenter()
+        let presenter = TattooDetailsPresenter(networkProvider: networkService, postId: postId)
         presenter.attach(view: viewController)
         presenter.attach(router: self)
-        presenter.attach(interactor: interactor)
         
-        interactor.attach(output: presenter)
         viewController.attach(output: presenter)
         
         self.presenter = presenter

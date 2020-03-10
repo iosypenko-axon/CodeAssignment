@@ -16,7 +16,8 @@ struct CellViewModel {
     var image: PostImage?
     
     func getAdjustedImageHeight(for newWidth: CGFloat) -> CGFloat {
-        guard let imageWidth = image?.width, let imageHeight = image?.height, imageHeight != 0 else { return CGFloat( image?.width ?? 250) }
+        let defaultHeight: Int = 250
+        guard let imageWidth = image?.width, let imageHeight = image?.height, imageHeight != 0 else { return CGFloat(image?.width ?? defaultHeight) }
         let aspectRatio = CGFloat(imageWidth) / CGFloat(imageHeight)
         return newWidth / aspectRatio
     }

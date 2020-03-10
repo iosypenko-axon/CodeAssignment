@@ -17,6 +17,7 @@ class TattooDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        output?.didLoad()
     }
 }
 
@@ -33,6 +34,5 @@ extension TattooDetailsViewController: TattooDetailsViewInput {
 
 private extension TattooDetailsViewController {
     func setupView() {
-        self.view.backgroundColor = .blue
     }
 }

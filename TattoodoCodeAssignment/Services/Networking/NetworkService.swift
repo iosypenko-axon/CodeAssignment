@@ -19,7 +19,9 @@ protocol PostDetailsProvider {
     func getPostDetails(pageId: Int, completion: @escaping (Result<PostDetails, Error>) -> Void)
 }
 
-class NetworkService {
+protocol NetworkProvider: PostsListProvider, PostDetailsProvider {}
+
+class NetworkService: NetworkProvider {
     private let networkProvider: MoyaProvider<PostsEndpoint>
 
     init(networkProvider: MoyaProvider<PostsEndpoint>) {
@@ -27,7 +29,7 @@ class NetworkService {
     }
 }
 
-extension NetworkService: PostsListProvider {
+extension NetworkService {
     func getPostsList(pageNumber: Int, completion: @escaping (Result<PostsListPage, Error>) -> Void) {
         networkProvider.request(.getPostsList(pageNumber: pageNumber)) { result in
             switch result {
@@ -45,7 +47,7 @@ extension NetworkService: PostsListProvider {
     }
 }
 
-extension NetworkService: PostDetailsProvider {
+extension NetworkService {
     func getPostDetails(pageId: Int, completion: @escaping (Result<PostDetails, Error>) -> Void) {
         networkProvider.request(.getPostDetails(postId: pageId)) { result in
             switch result {

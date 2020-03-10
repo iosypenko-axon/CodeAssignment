@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import Moya
 
 protocol TattooListRouter: class {
-    
+    func openDetails(for id: Int)
 }
 
 final class TattooListScreen {
     private let navigationController = NavigationController()
     private weak var presenter: TattooListPresenter?
     private weak var viewController: TattooListViewController?
+    private let networkService: NetworkProvider
+    
+    init() {
+        self.networkService = NetworkService(networkProvider: MoyaProvider<PostsEndpoint>(plugins: [NetworkLoggerPlugin()]))
+    }
     
     func createAsRoot() -> UIViewController {
         navigationController.setViewControllers([self.instantiateViewController()], animated: false)
@@ -25,7 +31,8 @@ final class TattooListScreen {
     func instantiateViewController() -> TattooListViewController {
         let viewController = TattooListViewController()
         
-        let presenter = TattooListPresenter(paginationManager: PaginationManager())
+        let paginationManager = PaginationManager(networkService: networkService)
+        let presenter = TattooListPresenter(paginationManager: paginationManager)
         presenter.attach(view: viewController)
         presenter.attach(router: self)
         
@@ -38,4 +45,7 @@ final class TattooListScreen {
 }
 
 extension TattooListScreen: TattooListRouter {
+    func openDetails(for id: Int) {
+        TattooDetailsScreen(networkService: networkService, postId: id).push(to: navigationController)
+    }
 }

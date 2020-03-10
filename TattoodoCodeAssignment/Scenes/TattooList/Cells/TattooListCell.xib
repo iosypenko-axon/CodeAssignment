@@ -21,7 +21,7 @@
                         <rect key="frame" x="8" y="8" width="304" height="304"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C8c-0A-jLv" userLabel="tattooImage">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="238.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="230.5"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6c1-QB-XXG">
                                 <rect key="frame" x="0.0" y="238.5" width="304" height="65.5"/>
@@ -53,7 +53,7 @@
                             <constraint firstItem="C8c-0A-jLv" firstAttribute="top" secondItem="Hko-Fe-Xx8" secondAttribute="top" id="TY1-yh-RWo"/>
                             <constraint firstAttribute="bottom" secondItem="6c1-QB-XXG" secondAttribute="bottom" id="XaF-pG-vSL"/>
                             <constraint firstItem="C8c-0A-jLv" firstAttribute="leading" secondItem="Hko-Fe-Xx8" secondAttribute="leading" id="Z0H-x6-fdE"/>
-                            <constraint firstItem="6c1-QB-XXG" firstAttribute="top" secondItem="C8c-0A-jLv" secondAttribute="bottom" id="f5s-Em-IsY"/>
+                            <constraint firstItem="6c1-QB-XXG" firstAttribute="top" secondItem="C8c-0A-jLv" secondAttribute="bottom" constant="8" id="f5s-Em-IsY"/>
                         </constraints>
                     </view>
                 </subviews>
