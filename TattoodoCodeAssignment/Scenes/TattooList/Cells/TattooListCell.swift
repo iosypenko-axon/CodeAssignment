@@ -9,18 +9,11 @@
 import UIKit
 import Kingfisher
 
-struct CellViewModel {
+struct CellViewModel: PostViewModel {
     var likesCount: String
     var commentsCount: String
     var pinsCount: String
     var image: PostImage?
-    
-    func getAdjustedImageHeight(for newWidth: CGFloat) -> CGFloat {
-        let defaultHeight: Int = 250
-        guard let imageWidth = image?.width, let imageHeight = image?.height, imageHeight != 0 else { return CGFloat(image?.width ?? defaultHeight) }
-        let aspectRatio = CGFloat(imageWidth) / CGFloat(imageHeight)
-        return newWidth / aspectRatio
-    }
 }
 
 class TattooListCell: UITableViewCell {

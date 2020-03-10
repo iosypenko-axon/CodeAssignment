@@ -45,8 +45,27 @@ extension TattooDetailsPresenter: TattooDetailsViewOutput {
 // MARK: - Private methods
 private extension TattooDetailsPresenter {
     func loadPostDetails() {
-        networkProvider.getPostDetails(pageId: postId) { result in
-            //
+        networkProvider.getPostDetails(pageId: postId) { [weak self] result in
+            
+            switch result {
+            case .failure(let error):
+                self?.showError(description: error.localizedDescription)
+            case .success(let details):
+                self?.showDetails(details)
+            }
         }
+    }
+    
+    func showDetails(_ details: PostDetailsData) {
+        let model = DetailsViewModel(likesCount: String(details.counts?.likes ?? 0),
+                                     commentsCount: String(details.counts?.comments ?? 0),
+                                     pinsCount: String(details.counts?.pins ?? 0),
+                                     image: details.image,
+                                     description: details.description)
+        view?.updateView(with: model)
+    }
+    
+    func showError(description: String) {
+        view?.showError(description: description)
     }
 }

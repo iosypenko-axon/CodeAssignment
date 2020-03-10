@@ -9,8 +9,12 @@
 import Foundation
 
 struct PostDetails: Decodable {
+    let data: PostDetailsData
+}
+
+struct PostDetailsData: Decodable {
     let id: Int
     let description: String
-    let image: PostImage
-    let counts: PostCounts
+    let image: PostImage?
+    let counts: PostCounts?
 }

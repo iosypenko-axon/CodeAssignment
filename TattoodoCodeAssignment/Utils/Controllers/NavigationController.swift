@@ -19,7 +19,6 @@ class NavigationController: UINavigationController {
         super.viewDidLoad()
         
         navigationBar.isTranslucent = true
-        navigationBar.tintColor = .white
         self.delegate = self
     }
 }

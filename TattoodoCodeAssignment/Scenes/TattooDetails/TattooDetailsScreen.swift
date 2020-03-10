@@ -15,6 +15,8 @@ protocol TattooDetailsRouter: class {
 final class TattooDetailsScreen {
     private weak var presenter: TattooDetailsPresenter?
     private weak var viewController: TattooDetailsViewController?
+    private let controllerId = "TattooDetailsViewController"
+    
     private let networkService: NetworkProvider
     private let postId: Int
     
@@ -28,7 +30,9 @@ final class TattooDetailsScreen {
     }
     
     func instantiateViewController() -> TattooDetailsViewController {
-        let viewController = TattooDetailsViewController()
+        let storyboard = UIStoryboard(name: "TattooDetailsStoryboard", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: controllerId) as?
+            TattooDetailsViewController else { fatalError("Failed to instantiate TattooDetailsViewController") }
         
         let presenter = TattooDetailsPresenter(networkProvider: networkService, postId: postId)
         presenter.attach(view: viewController)
