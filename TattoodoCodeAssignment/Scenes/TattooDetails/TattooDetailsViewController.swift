@@ -25,15 +25,18 @@ struct DetailsViewModel: PostViewModel {
 class TattooDetailsViewController: UIViewController {
     private var output: TattooDetailsViewOutput?
 
+    @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var tattooImage: UIImageView!
     @IBOutlet private weak var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var likesLabel: UILabel!
     @IBOutlet private weak var commentsLabel: UILabel!
     @IBOutlet private weak var pinsLabel: UILabel!
-    @IBOutlet private weak var descriptionTextView: UITextView!
+   
+    @IBOutlet private weak var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         output?.didLoad()
     }
 }
@@ -52,7 +55,7 @@ extension TattooDetailsViewController: TattooDetailsViewInput {
         pinsLabel.text = "Pins: " + model.pinsCount
         tattooImage.kf.setImage(with: model.image?.url, options: [.transition(.fade(0.5))])
         imageHeightConstraint.constant = model.getAdjustedImageHeight(for: view.bounds.width)
-        descriptionTextView.text = model.description
+        descriptionLabel.text = model.description
     }
     
     func showError(description: String) {
@@ -62,4 +65,11 @@ extension TattooDetailsViewController: TattooDetailsViewInput {
 }
 
 private extension TattooDetailsViewController {
+    func setupView() {
+        scrollView.contentInset.bottom = 30
+        likesLabel.text = nil
+        commentsLabel.text = nil
+        pinsLabel.text = nil
+        descriptionLabel.text = nil
+    }
 }

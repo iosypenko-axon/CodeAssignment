@@ -55,6 +55,7 @@ extension TattooListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         output?.didSelectCell(at: indexPath.row)
+        tableView.cellForRow(at: indexPath)?.isSelected = false
     }
 }
 
@@ -80,7 +81,6 @@ extension TattooListViewController: UITableViewDataSource {
 private extension TattooListViewController  {
     func setupView() {
         view.addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.bindTo(self.view)
         tableView.delegate = self
         tableView.dataSource = self
