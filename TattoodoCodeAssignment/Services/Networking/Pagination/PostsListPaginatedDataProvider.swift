@@ -9,7 +9,7 @@
 import Foundation
 import Moya
 
-final class PaginationManager: PaginationSupportable {
+final class PostsListPaginatedDataProvider: PaginationSupportable {
     typealias PaginatedItem = PostShortData
     
     private var loadedPages: [PostsListPage] = []

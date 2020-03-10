@@ -11,6 +11,7 @@ import UIKit
 extension UIView {
     
     func bindTo(_ view: UIView, margin: CGFloat = 0.0) {
+        self.translatesAutoresizingMaskIntoConstraints = false
         bindTo(view, insets: UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin))
     }
     

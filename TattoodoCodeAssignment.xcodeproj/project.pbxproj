@@ -21,7 +21,7 @@
 		18420C85241241F30060B3BE /* PostsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C84241241F30060B3BE /* PostsEndpoint.swift */; };
 		18420C8724124A260060B3BE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C8624124A260060B3BE /* NetworkService.swift */; };
 		18420C8E2412648E0060B3BE /* PostShortData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C8D2412648E0060B3BE /* PostShortData.swift */; };
-		18420C92241286830060B3BE /* PaginationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C91241286830060B3BE /* PaginationManager.swift */; };
+		18420C92241286830060B3BE /* PostsListPaginatedDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C91241286830060B3BE /* PostsListPaginatedDataProvider.swift */; };
 		18420C94241286B20060B3BE /* PaginationSupportable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C93241286B20060B3BE /* PaginationSupportable.swift */; };
 		18420C9924128A530060B3BE /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C9824128A530060B3BE /* PostDetails.swift */; };
 		18420C9B24128A7E0060B3BE /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18420C9A24128A7E0060B3BE /* Pagination.swift */; };
@@ -67,7 +67,7 @@
 		18420C84241241F30060B3BE /* PostsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsEndpoint.swift; sourceTree = "<group>"; };
 		18420C8624124A260060B3BE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		18420C8D2412648E0060B3BE /* PostShortData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostShortData.swift; sourceTree = "<group>"; };
-		18420C91241286830060B3BE /* PaginationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationManager.swift; sourceTree = "<group>"; };
+		18420C91241286830060B3BE /* PostsListPaginatedDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListPaginatedDataProvider.swift; sourceTree = "<group>"; };
 		18420C93241286B20060B3BE /* PaginationSupportable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationSupportable.swift; sourceTree = "<group>"; };
 		18420C9824128A530060B3BE /* PostDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetails.swift; sourceTree = "<group>"; };
 		18420C9A24128A7E0060B3BE /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				18420C93241286B20060B3BE /* PaginationSupportable.swift */,
-				18420C91241286830060B3BE /* PaginationManager.swift */,
+				18420C91241286830060B3BE /* PostsListPaginatedDataProvider.swift */,
 			);
 			path = Pagination;
 			sourceTree = "<group>";
@@ -490,7 +490,7 @@
 				18420C9D2412A7220060B3BE /* ReuseIdentifying.swift in Sources */,
 				18420C7324114A3B0060B3BE /* UIView+AutoLayout.swift in Sources */,
 				18420C6A241139BD0060B3BE /* TattooListPresenter.swift in Sources */,
-				18420C92241286830060B3BE /* PaginationManager.swift in Sources */,
+				18420C92241286830060B3BE /* PostsListPaginatedDataProvider.swift in Sources */,
 				18420C94241286B20060B3BE /* PaginationSupportable.swift in Sources */,
 				184A92522417AACD001B1528 /* PostsListProvider.swift in Sources */,
 				18420C8724124A260060B3BE /* NetworkService.swift in Sources */,

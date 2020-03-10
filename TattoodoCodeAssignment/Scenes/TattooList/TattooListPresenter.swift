@@ -26,7 +26,7 @@ class TattooListPresenter {
     private weak var view: TattooListViewInput?
     
     private var pages: [PostShortData] = []
-    private let paginationManager: PaginationManager
+    private let paginationProvider: PostsListPaginatedDataProvider
         
     private var isLoading = false {
         didSet {
@@ -34,8 +34,8 @@ class TattooListPresenter {
         }
     }
     
-    init(paginationManager: PaginationManager) {
-        self.paginationManager = paginationManager
+    init(paginationManager: PostsListPaginatedDataProvider) {
+        self.paginationProvider = paginationManager
     }
 }
 
@@ -54,10 +54,10 @@ extension TattooListPresenter {
 extension TattooListPresenter: TattooListViewOutput {
     var numberOfRows: Int { pages.count }
     
-    var shouldShowSpinner: Bool { paginationManager.dataSource.count < paginationManager.totalPages ?? 0}
+    var shouldShowSpinner: Bool { paginationProvider.dataSource.count < paginationProvider.totalPages ?? 0}
     
     func viewModelForCell(at index: Int) -> CellViewModel {
-        let item = paginationManager.dataSource[index]
+        let item = paginationProvider.dataSource[index]
         
         return CellViewModel(likesCount: "\(item.counts?.likes ?? 0)",
             commentsCount: "\(item.counts?.comments ?? 0)",
@@ -85,7 +85,7 @@ private extension TattooListPresenter {
     func loadPostsList() {
         guard !isLoading else { return }
         isLoading = true
-        paginationManager.getNewData(request: paginationManager.request) { [weak self] newPages in
+        paginationProvider.getNewData(request: paginationProvider.request) { [weak self] newPages in
             self?.isLoading = false
             self?.pages.append(contentsOf: newPages)
             self?.view?.update()

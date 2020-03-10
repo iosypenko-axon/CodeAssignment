@@ -32,8 +32,8 @@ final class TattooListScreen {
         let viewController = TattooListViewController()
         viewController.title = "Posts"
         
-        let paginationManager = PaginationManager(networkService: networkService)
-        let presenter = TattooListPresenter(paginationManager: paginationManager)
+        let paginationProvider = PostsListPaginatedDataProvider(networkService: networkService)
+        let presenter = TattooListPresenter(paginationManager: paginationProvider)
         presenter.attach(view: viewController)
         presenter.attach(router: self)
         
