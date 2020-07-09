@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 
+// test
 protocol TattooDetailsViewInput: class {
     func updateView(with model: DetailsViewModel)
     func showError(description: String)
