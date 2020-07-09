@@ -12,6 +12,7 @@ protocol TattooDetailsRouter: class {
     func backAction()
 }
 
+//test2
 final class TattooDetailsScreen {
     private weak var presenter: TattooDetailsPresenter?
     private weak var viewController: TattooDetailsViewController?
